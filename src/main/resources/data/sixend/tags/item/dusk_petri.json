@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "sixend:dusk_petro",
+    "sixend:stripped_dusk_petro",
+    "sixend:dusk_crust",
+    "sixend:stripped_dusk_crust"
+  ]
+}

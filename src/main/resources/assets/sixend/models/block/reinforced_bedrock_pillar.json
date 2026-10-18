@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "minecraft:block/bedrock",
+    "side": "sixend:block/reinforced_bedrock_pillar"
+  }
+}

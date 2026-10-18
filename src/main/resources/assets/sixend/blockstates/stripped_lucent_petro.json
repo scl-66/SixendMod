@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "sixend:block/stripped_lucent_petro_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "sixend:block/stripped_lucent_petro"
+    },
+    "axis=z": {
+      "model": "sixend:block/stripped_lucent_petro_horizontal",
+      "x": 90
+    }
+  }
+}

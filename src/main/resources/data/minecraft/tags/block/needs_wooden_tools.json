@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "sixend:polished_end_stone",
+    "sixend:chorus_turf",
+    "sixend:azulite",
+    "sixend:polished_azulite",
+    "sixend:azulite_bricks",
+    "sixend:azulite_tiles",
+    "sixend:end_stone_tiles",
+    "sixend:chiseled_end_stone",
+    "sixend:chiseled_purpur",
+    "sixend:lucent_end_stone",
+    "sixend:lucent_endsoil"
+  ]
+}

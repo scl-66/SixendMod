@@ -1,0 +1,6 @@
+// 26.2	-999999999-01-01T00:00:00	Sixend/Block Loot Tables
+a7029bc2f1dc05b71750e811e09c43b32e9434af data/sixend/loot_table/blocks/azulite_bricks.json
+36466161eb3d88935b324882be4a74f0e321508c data/sixend/loot_table/blocks/azulite_tiles.json
+06b74ed8c47a458ee742b8699b77e335ada7b6ff data/sixend/loot_table/blocks/chiseled_end_stone.json
+da2c60b98602ff3615458e9b78a8f1ba3da6659f data/sixend/loot_table/blocks/chiseled_purpur.json
+0d042695f816b5bcaa18e297e711e28aa8f25330 data/sixend/loot_table/blocks/end_stone_tiles.json

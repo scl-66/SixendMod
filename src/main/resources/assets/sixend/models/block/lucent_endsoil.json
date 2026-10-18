@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "particle": "sixend:block/lucent_hypnum",
+    "bottom": "minecraft:block/endsoil",
+    "top": "sixend:block/lucent_hypnum",
+    "side": "sixend:block/lucent_endsoil"
+  }
+}

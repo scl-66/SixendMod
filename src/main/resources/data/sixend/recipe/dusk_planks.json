@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "#sixend:dusk_petri"
+  ],
+  "result": {
+    "id": "sixend:dusk_planks",
+    "count": 4
+  }
+}

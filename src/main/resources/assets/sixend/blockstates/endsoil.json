@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "sixend:block/endsoil"
+      },
+      {
+        "model": "sixend:block/endsoil"
+      },
+      {
+        "model": "sixend:block/endsoil"
+      },
+      {
+        "model": "sixend:block/endsoil",
+        "y": 90
+      },
+      {
+        "model": "sixend:block/endsoil",
+        "y": 180
+      },
+      {
+        "model": "sixend:block/endsoil",
+        "y": 270
+      }
+    ]
+  }
+}

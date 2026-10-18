@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "sixend:block/stripped_dusk_petro_top",
+    "side": "sixend:block/stripped_dusk_petro"
+  }
+}

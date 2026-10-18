@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "sixend:block/dusk_petro",
+    "side": "sixend:block/dusk_petro"
+  }
+}

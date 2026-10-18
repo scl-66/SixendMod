@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "particle": "sixend:block/reinforced_bedrock",
+    "bottom": "minecraft:block/bedrock",
+    "top": "sixend:block/reinforced_bedrock_top",
+    "side": "sixend:block/reinforced_bedrock"
+  }
+}

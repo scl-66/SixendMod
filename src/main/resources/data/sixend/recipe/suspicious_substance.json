@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": "#minecraft:logs_that_burn"
+  },
+  "result": {
+    "id": "sixend:suspicious_substance",
+    "count": 1
+  }
+}

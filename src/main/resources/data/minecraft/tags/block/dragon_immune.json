@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "sixend:polished_end_stone",
+    "sixend:azulite",
+    "sixend:polished_azulite",
+    "sixend:endsoil",
+    "sixend:lucent_hypnum"
+  ]
+}

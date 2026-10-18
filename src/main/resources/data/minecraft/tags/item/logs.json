@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "sixend:dusk_petro",
+    "sixend:lucent_petro",
+    "sixend:stripped_dusk_petro",
+    "sixend:stripped_lucent_petro",
+    "sixend:dusk_crust",
+    "sixend:lucent_crust",
+    "sixend:stripped_dusk_crust",
+    "sixend:stripped_lucent_crust"
+  ]
+}

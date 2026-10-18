@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sixend:block/reinforced_bedrock_pillar"
+    }
+  }
+}

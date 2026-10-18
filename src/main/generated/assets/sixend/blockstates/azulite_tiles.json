@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "sixend:block/azulite_tiles"
+      },
+      {
+        "model": "sixend:block/azulite_tiles_mirrored"
+      }
+    ]
+  }
+}

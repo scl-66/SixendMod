@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "sixend",
+	"version": "${version}",
+	"name": "Sixend",
+	"description": "Just a little End Update content mod. Hee hee hee.",
+	"authors": [
+		"sixtydegrees"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/sixend/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "net.sixtydegrees.sixend.Sixend"
+		],
+		"client": [
+          "net.sixtydegrees.sixend.client.SixendClient"
+		],
+		"fabric-datagen": [
+          "net.sixtydegrees.sixend.datagen.SixendDataGenerator"
+		]
+	},
+	"mixins": [
+		"sixend.mixins.json",
+		{
+			"config": "sixend.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

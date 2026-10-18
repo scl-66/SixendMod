@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "sixend:block/stripped_dusk_crust",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "sixend:block/stripped_dusk_crust"
+    },
+    "axis=z": {
+      "model": "sixend:block/stripped_dusk_crust",
+      "x": 90
+    }
+  }
+}

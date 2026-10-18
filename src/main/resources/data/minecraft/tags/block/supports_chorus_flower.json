@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "sixend:chorus_turf",
+    "sixend:endsoil",
+    "sixend:lucent_hypnum",
+    "sixend:lucent_end_stone",
+    "sixend:lucent_endsoil"
+  ]
+}

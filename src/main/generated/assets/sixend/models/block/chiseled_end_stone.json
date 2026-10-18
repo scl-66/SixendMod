@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "particle": "sixend:block/chiseled_end_stone1",
+    "down": "sixend:block/chiseled_end_stone1",
+    "up": "sixend:block/chiseled_end_stone2",
+    "north": "sixend:block/chiseled_end_stone3",
+    "south": "sixend:block/chiseled_end_stone4",
+    "east": "sixend:block/chiseled_end_stone5",
+    "west": "sixend:block/chiseled_end_stone6"
+  }
+}
