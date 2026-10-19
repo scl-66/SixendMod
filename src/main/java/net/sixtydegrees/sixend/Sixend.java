@@ -25,8 +25,8 @@ public class Sixend implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		ModItems.initialize();
-		ModBlocks.initialize();
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 		ModFlammableBlocks.registerFlammableBlocks();
 		ModStrippableBlocks.registerStrippableBlocks();
 	}
