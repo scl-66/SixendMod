@@ -10,7 +10,9 @@ import net.minecraft.world.item.Item;
 import java.util.function.Function;
 
 public class ModItems {
-    public static final Item SUSPICIOUS_SUBSTANCE = register(ModItemIds.SUSPICIOUS_SUBSTANCE, Item::new, new Item.Properties());
+    public static final Item PYLON = register(ModItemIds.PYLON, Item::new, new Item.Properties());
+    public static final Item PYLON_FRAME = register(ModItemIds.PYLON_FRAME, Item::new, new Item.Properties());
+    public static final Item CHORUS_PETALS = register(ModItemIds.CHORUS_PETALS, Item::new, new Item.Properties());
 
     public static ResourceKey<Item> getRK(Item item) {
         return BuiltInRegistries.ITEM.getResourceKey(item).get();
@@ -25,10 +27,17 @@ public class ModItems {
 
         return item;
     }
-    public static void initialize() {
+    public static void registerModItems() {
         // Get the event for modifying entries in the ingredients group.
         // And register an event handler that adds our suspicious item to the ingredients group.
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
-            .register((creativeTab) -> creativeTab.accept(ModItems.SUSPICIOUS_SUBSTANCE));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.NATURAL_BLOCKS).register((naturalBlocks) -> {
+            naturalBlocks.accept(ModItems.CHORUS_PETALS);
+        });
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register((functionalBlocks) -> {
+            functionalBlocks.accept(ModItems.PYLON);
+        });
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register((ingredients) -> {
+            ingredients.accept(ModItems.PYLON_FRAME);
+        });
     }
 }

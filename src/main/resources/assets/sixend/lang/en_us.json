@@ -1,5 +1,8 @@
 {
-  "item.sixend.suspicious_substance": "Suspicious Substance",
+  "item.sixend.pylon": "Pylon",
+  "item.sixend.pylon_frame": "Pylon Frame",
+  "item.sixend.chorus_petals": "Chorus Petals",
+
   "block.sixend.endsoil": "Endsoil",
   "block.sixend.dusk_petro": "Dusk Petro",
   "block.sixend.dusk_crust": "Dusk Crust",
