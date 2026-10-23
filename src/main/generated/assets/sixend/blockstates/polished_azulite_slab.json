@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sixend:block/polished_azulite_slab"
+    },
+    "type=double": {
+      "model": "sixend:block/polished_azulite"
+    },
+    "type=top": {
+      "model": "sixend:block/polished_azulite_slab_top"
+    }
+  }
+}

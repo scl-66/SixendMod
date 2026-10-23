@@ -1,0 +1,21 @@
+{
+  "values": [
+    "sixend:azulite",
+    "sixend:polished_azulite",
+    "sixend:azulite_bricks",
+    "sixend:azulite_tiles",
+    "sixend:end_stone_tiles",
+    "sixend:chiseled_end_stone",
+    "sixend:polished_end_stone",
+    "sixend:chiseled_purpur",
+    "sixend:eldershale",
+    "sixend:eldershale_bricks",
+    "sixend:eldershale_pillar",
+    "sixend:chiseled_eldershale",
+    "sixend:cobbled_eldershale",
+    "sixend:cracked_eldershale_bricks",
+    "sixend:polished_eldershale",
+    "sixend:chorus_turf",
+    "sixend:lucent_end_stone"
+  ]
+}

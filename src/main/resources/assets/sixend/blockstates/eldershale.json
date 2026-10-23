@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "sixend:block/eldershale"
+      },
+      {
+        "model": "sixend:block/eldershale_mirrored"
+      },
+      {
+        "model": "sixend:block/eldershale",
+        "y": 180
+      },
+      {
+        "model": "sixend:block/eldershale_mirrored",
+        "y": 180
+      }
+    ]
+  }
+}

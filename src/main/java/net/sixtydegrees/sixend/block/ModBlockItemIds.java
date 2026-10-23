@@ -51,6 +51,46 @@ public class ModBlockItemIds {
             "stripped_dusk_crust"
     );
     // endregion
+    // region Dusk Stairs
+    public static final BlockItemId DUSK_STAIRS = create(
+            "dusk_stairs"
+    );
+    // endregion
+    // region Dusk Slab
+    public static final BlockItemId DUSK_SLAB = create(
+            "dusk_slab"
+    );
+    // endregion
+    // region Dusk Fence
+    public static final BlockItemId DUSK_FENCE = create(
+            "dusk_fence"
+    );
+    // endregion
+    // region Dusk Fence Gate
+    public static final BlockItemId DUSK_FENCE_GATE = create(
+            "dusk_fence_gate"
+    );
+    // endregion
+    // region Dusk Door
+    public static final BlockItemId DUSK_DOOR = create(
+            "dusk_door"
+    );
+    // region Dusk Trapdoor
+    public static final BlockItemId DUSK_TRAPDOOR = create(
+            "dusk_trapdoor"
+    );
+    // endregion
+    // region Dusk Pressure Plate
+    public static final BlockItemId DUSK_PRESSURE_PLATE = create(
+            "dusk_pressure_plate"
+    );
+    // endregion
+    // region Dusk Button
+    public static final BlockItemId DUSK_BUTTON = create(
+            "dusk_button"
+    );
+    // endregion
+
     // region Lucent Petro
     public static final BlockItemId LUCENT_PETRO = create(
             "lucent_petro"
@@ -76,41 +116,201 @@ public class ModBlockItemIds {
             "stripped_lucent_crust"
     );
     // endregion
+    // region Dusk Stairs
+    public static final BlockItemId LUCENT_STAIRS = create(
+            "lucent_stairs"
+    );
+    // endregion
+    // region Lucent Slab
+    public static final BlockItemId LUCENT_SLAB = create(
+            "lucent_slab"
+    );
+    // endregion
+    // region Lucent Fence
+    public static final BlockItemId LUCENT_FENCE = create(
+            "lucent_fence"
+    );
+    // endregion
+    // region Lucent Fence Gate
+    public static final BlockItemId LUCENT_FENCE_GATE = create(
+            "lucent_fence_gate"
+    );
+    // endregion
+    // region Lucent Door
+    public static final BlockItemId LUCENT_DOOR = create(
+            "lucent_door"
+    );
+    // region Lucent Trapdoor
+    public static final BlockItemId LUCENT_TRAPDOOR = create(
+            "lucent_trapdoor"
+    );
+    // endregion
+    // region Lucent Pressure Plate
+    public static final BlockItemId LUCENT_PRESSURE_PLATE = create(
+            "lucent_pressure_plate"
+    );
+    // endregion
+    // region Lucent Button
+    public static final BlockItemId LUCENT_BUTTON = create(
+            "lucent_button"
+    );
+    // endregion
+
     // region Lucent Hypnum (moss)
     public static final BlockItemId LUCENT_HYPNUM = create(
             "lucent_hypnum"
     );
     // endregion
+
     // region Azulite
     public static final BlockItemId AZULITE = create(
             "azulite"
+    );
+    public static final BlockItemId AZULITE_STAIRS = create(
+            "azulite_stairs"
+    );
+    public static final BlockItemId AZULITE_SLAB = create(
+            "azulite_slab"
+    );
+    public static final BlockItemId AZULITE_WALL = create(
+            "azulite_wall"
     );
     // endregion
     // region Polished Azulite
     public static final BlockItemId POLISHED_AZULITE = create(
             "polished_azulite"
     );
+    public static final BlockItemId POLISHED_AZULITE_STAIRS = create(
+            "polished_azulite_stairs"
+    );
+    public static final BlockItemId POLISHED_AZULITE_SLAB = create(
+            "polished_azulite_slab"
+    );
+    public static final BlockItemId POLISHED_AZULITE_WALL = create(
+            "polished_azulite_wall"
+    );
     // endregion
     // region Azulite Bricks
     public static final BlockItemId AZULITE_BRICKS = create(
             "azulite_bricks"
+    );
+    public static final BlockItemId AZULITE_BRICK_STAIRS = create(
+            "azulite_brick_stairs"
+    );
+    public static final BlockItemId AZULITE_BRICK_SLAB = create(
+            "azulite_brick_slab"
+    );
+    public static final BlockItemId AZULITE_BRICK_WALL = create(
+            "azulite_brick_wall"
     );
     // endregion
     // region Azulite Tiles
     public static final BlockItemId AZULITE_TILES = create(
             "azulite_tiles"
     );
+    public static final BlockItemId AZULITE_TILE_STAIRS = create(
+            "azulite_tile_stairs"
+    );
+    public static final BlockItemId AZULITE_TILE_SLAB = create(
+            "azulite_tile_slab"
+    );
+    public static final BlockItemId AZULITE_TILE_WALL = create(
+            "azulite_tile_wall"
+    );
     // endregion
+
+    // region Eldershale
+    public static final BlockItemId ELDERSHALE = create(
+            "eldershale"
+    );
+    // endregion
+    // region Cobbled Eldershale
+    public static final BlockItemId COBBLED_ELDERSHALE = create(
+            "cobbled_eldershale"
+    );
+    public static final BlockItemId COBBLED_ELDERSHALE_STAIRS = create(
+            "cobbled_eldershale_stairs"
+    );
+    public static final BlockItemId COBBLED_ELDERSHALE_SLAB = create(
+            "cobbled_eldershale_slab"
+    );
+    public static final BlockItemId COBBLED_ELDERSHALE_WALL = create(
+            "cobbled_eldershale_wall"
+    );
+    // endregion
+    // region Eldershale Bricks
+    public static final BlockItemId ELDERSHALE_BRICKS = create(
+            "eldershale_bricks"
+    );
+    public static final BlockItemId ELDERSHALE_BRICK_STAIRS = create(
+            "eldershale_brick_stairs"
+    );
+    public static final BlockItemId ELDERSHALE_BRICK_SLAB = create(
+            "eldershale_brick_slab"
+    );
+    public static final BlockItemId ELDERSHALE_BRICK_WALL = create(
+            "eldershale_brick_wall"
+    );
+    // endregion
+    // region Cracked Eldershale Bricks
+    public static final BlockItemId CRACKED_ELDERSHALE_BRICKS = create(
+            "cracked_eldershale_bricks"
+    );
+    // endregion
+    // region Polished Eldershale
+    public static final BlockItemId POLISHED_ELDERSHALE = create(
+            "polished_eldershale"
+    );
+    public static final BlockItemId POLISHED_ELDERSHALE_STAIRS = create(
+            "polished_eldershale_stairs"
+    );
+    public static final BlockItemId POLISHED_ELDERSHALE_SLAB = create(
+            "polished_eldershale_slab"
+    );
+    public static final BlockItemId POLISHED_ELDERSHALE_WALL = create(
+            "polished_eldershale_wall"
+    );
+    // endregion
+    // region Chiseled Eldershale
+    public static final BlockItemId CHISELED_ELDERSHALE = create(
+            "chiseled_eldershale"
+    );
+    // endregion
+    // region Eldershale Pillar
+    public static final BlockItemId ELDERSHALE_PILLAR = create(
+            "eldershale_pillar"
+    );
+    // endregion
+
     // region Polished End Stone
     public static final BlockItemId POLISHED_END_STONE = create(
             "polished_end_stone"
+    );
+    public static final BlockItemId POLISHED_END_STONE_STAIRS = create(
+            "polished_end_stone_stairs"
+    );
+    public static final BlockItemId POLISHED_END_STONE_SLAB = create(
+            "polished_end_stone_slab"
+    );
+    public static final BlockItemId POLISHED_END_STONE_WALL = create(
+            "polished_end_stone_wall"
     );
     // endregion
     // region End Stone Tiles
     public static final BlockItemId END_STONE_TILES = create(
             "end_stone_tiles"
     );
+    public static final BlockItemId END_STONE_TILE_STAIRS = create(
+            "end_stone_tile_stairs"
+    );
+    public static final BlockItemId END_STONE_TILE_SLAB = create(
+            "end_stone_tile_slab"
+    );
+    public static final BlockItemId END_STONE_TILE_WALL = create(
+            "end_stone_tile_wall"
+    );
     // endregion
+
     // region Chiseled End Stone
     public static final BlockItemId CHISELED_END_STONE = create(
             "chiseled_end_stone"

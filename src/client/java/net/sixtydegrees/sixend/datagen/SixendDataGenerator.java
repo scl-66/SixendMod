@@ -12,5 +12,6 @@ public class SixendDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(SixendBlockLootTableProvider::new);
         pack.addProvider(SixendBlockTagsProvider::new);
         pack.addProvider(SixendItemTagsProvider::new);
+        pack.addProvider(SixendRecipeProvider::new);
     }
 }

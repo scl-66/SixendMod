@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GPG",
+    "#O#",
+    "#O#"
+  ],
+  "key": {
+    "G": "minecraft:glass",
+    "P": "sixend:pylon_frame",
+    "#": "minecraft:end_stone",
+    "O": "minecraft:obsidian"
+  },
+  "result": {
+    "id": "sixend:pylon"
+  }
+}

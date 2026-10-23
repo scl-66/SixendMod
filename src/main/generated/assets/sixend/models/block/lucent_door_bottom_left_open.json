@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "textures": {
+    "bottom": "sixend:block/lucent_door_bottom",
+    "top": "sixend:block/lucent_door_top"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sixend:block/lucent_slab"
+    },
+    "type=double": {
+      "model": "sixend:block/lucent_planks"
+    },
+    "type=top": {
+      "model": "sixend:block/lucent_slab_top"
+    }
+  }
+}

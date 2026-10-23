@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "experience": 0.1,
+  "ingredient": "sixend:eldershale_bricks",
+  "result": {
+    "id": "sixend:cracked_eldershale_bricks"
+  }
+}

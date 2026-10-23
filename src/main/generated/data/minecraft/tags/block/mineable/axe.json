@@ -1,0 +1,30 @@
+{
+  "values": [
+    "sixend:dusk_petro",
+    "sixend:lucent_petro",
+    "sixend:dusk_planks",
+    "sixend:lucent_planks",
+    "sixend:stripped_dusk_petro",
+    "sixend:stripped_lucent_petro",
+    "sixend:dusk_crust",
+    "sixend:lucent_crust",
+    "sixend:stripped_dusk_crust",
+    "sixend:stripped_lucent_crust",
+    "sixend:dusk_stairs",
+    "sixend:lucent_stairs",
+    "sixend:dusk_slab",
+    "sixend:lucent_slab",
+    "sixend:dusk_fence",
+    "sixend:lucent_fence",
+    "sixend:dusk_fence_gate",
+    "sixend:lucent_fence_gate",
+    "sixend:dusk_door",
+    "sixend:lucent_door",
+    "sixend:dusk_trapdoor",
+    "sixend:lucent_trapdoor",
+    "sixend:dusk_pressure_plate",
+    "sixend:lucent_pressure_plate",
+    "sixend:dusk_button",
+    "sixend:lucent_button"
+  ]
+}

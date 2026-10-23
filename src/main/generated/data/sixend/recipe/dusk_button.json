@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    "sixend:dusk_planks"
+  ],
+  "result": {
+    "id": "sixend:dusk_button"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_azulite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sixend:azulite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sixend:azulite_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_azulite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sixend:azulite_stairs"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "values": [
+    "sixend:azulite_wall",
+    "sixend:polished_azulite_wall",
+    "sixend:azulite_brick_wall",
+    "sixend:azulite_tile_wall",
+    "sixend:cobbled_eldershale_wall",
+    "sixend:polished_eldershale_wall",
+    "sixend:eldershale_brick_wall",
+    "sixend:polished_end_stone_wall",
+    "sixend:end_stone_tile_wall"
+  ]
+}

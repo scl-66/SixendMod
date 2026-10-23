@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "sixend:block/end_stone_tiles",
+    "side": "sixend:block/end_stone_tiles",
+    "top": "sixend:block/end_stone_tiles"
+  }
+}

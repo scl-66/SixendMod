@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_mirrored",
+  "textures": {
+    "end": "sixend:block/eldershale_top",
+    "side": "sixend:block/eldershale"
+  }
+}

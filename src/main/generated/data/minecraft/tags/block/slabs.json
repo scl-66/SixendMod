@@ -1,0 +1,15 @@
+{
+  "values": [
+    "sixend:dusk_slab",
+    "sixend:lucent_slab",
+    "sixend:azulite_slab",
+    "sixend:polished_azulite_slab",
+    "sixend:azulite_brick_slab",
+    "sixend:azulite_tile_slab",
+    "sixend:cobbled_eldershale_slab",
+    "sixend:polished_eldershale_slab",
+    "sixend:eldershale_brick_slab",
+    "sixend:polished_end_stone_slab",
+    "sixend:end_stone_tile_slab"
+  ]
+}

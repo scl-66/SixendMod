@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "sixend:block/polished_azulite",
+    "side": "sixend:block/polished_azulite",
+    "top": "sixend:block/polished_azulite"
+  }
+}

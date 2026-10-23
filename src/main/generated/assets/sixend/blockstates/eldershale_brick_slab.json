@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sixend:block/eldershale_brick_slab"
+    },
+    "type=double": {
+      "model": "sixend:block/eldershale_bricks"
+    },
+    "type=top": {
+      "model": "sixend:block/eldershale_brick_slab_top"
+    }
+  }
+}

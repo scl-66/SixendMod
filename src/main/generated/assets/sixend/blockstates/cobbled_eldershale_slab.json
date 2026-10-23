@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sixend:block/cobbled_eldershale_slab"
+    },
+    "type=double": {
+      "model": "sixend:block/cobbled_eldershale"
+    },
+    "type=top": {
+      "model": "sixend:block/cobbled_eldershale_slab_top"
+    }
+  }
+}

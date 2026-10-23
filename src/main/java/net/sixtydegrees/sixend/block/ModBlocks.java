@@ -1,5 +1,7 @@
 package net.sixtydegrees.sixend.block;
 
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.sixtydegrees.sixend.world.level.block.CoveredEndStone;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
@@ -46,17 +48,18 @@ public class ModBlocks {
             BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(3.0F, 9.0F)
     );
     //endregion
-    //region Dusk Petro
+    //region Lucent Hypnum
+    public static final Block LUCENT_HYPNUM = register(
+            ModBlockItemIds.LUCENT_HYPNUM,
+            Block::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_MAGENTA).strength(0.1F).sound(SoundType.MOSS).pushReaction(PushReaction.DESTROY)
+    );
+    //endregion
+
+    // region Dusk Petro
     public static final Block DUSK_PETRO = register(
             ModBlockItemIds.DUSK_PETRO,
             RotatedPillarBlock::new,
-            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASS).strength(2.0F, 0.3F).sound(SoundType.STEM).ignitedByLava()
-    );
-    //endregion
-    //region Dusk Planks
-    public static final Block DUSK_PLANKS = register(
-            ModBlockItemIds.DUSK_PLANKS,
-            Block::new,
             BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASS).strength(2.0F, 0.3F).sound(SoundType.STEM).ignitedByLava()
     );
     //endregion
@@ -81,16 +84,56 @@ public class ModBlocks {
             BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASS).strength(2.0F, 0.3F).sound(SoundType.STEM).ignitedByLava()
     );
     //endregion
+    //region Dusk Planks
+    public static final Block DUSK_PLANKS = register(
+            ModBlockItemIds.DUSK_PLANKS,
+            Block::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASS).strength(2.0F, 0.3F).sound(SoundType.STEM).ignitedByLava()
+    );
+    public static final Block DUSK_STAIRS = register(
+            ModBlockItemIds.DUSK_STAIRS,
+            p -> new StairBlock(DUSK_PLANKS.defaultBlockState(), p),
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASS).strength(2.0F, 0.3F).sound(SoundType.STEM).ignitedByLava()
+    );
+    public static final Block DUSK_SLAB = register(
+            ModBlockItemIds.DUSK_SLAB,
+            SlabBlock::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASS).strength(2.0F, 0.3F).sound(SoundType.STEM).ignitedByLava()
+    );
+    public static final Block DUSK_FENCE = register(
+            ModBlockItemIds.DUSK_FENCE,
+            FenceBlock::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASS).strength(2.0F, 0.3F).sound(SoundType.STEM).ignitedByLava()
+    );
+    public static final Block DUSK_FENCE_GATE = register(
+            ModBlockItemIds.DUSK_FENCE_GATE,
+            p -> new FenceGateBlock(WoodType.DARK_OAK, p),
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASS).strength(2.0F, 0.3F).sound(SoundType.STEM).ignitedByLava()
+    );
+    public static final Block DUSK_DOOR = register(
+            ModBlockItemIds.DUSK_DOOR,
+            p -> new DoorBlock(BlockSetType.OAK, p),
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASS).strength(3.0F).noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY)
+    );
+    public static final Block DUSK_TRAPDOOR = register(
+            ModBlockItemIds.DUSK_TRAPDOOR,
+            p -> new TrapDoorBlock(BlockSetType.SPRUCE, p),
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASS).strength(3.0F).noOcclusion().isValidSpawn(Blocks::never).ignitedByLava()
+    );
+    public static final Block DUSK_BUTTON = register(ModBlockItemIds.DUSK_BUTTON,
+            p -> new ButtonBlock(BlockSetType.OAK, 30, p),
+            BlockBehaviour.Properties.of().noCollision().strength(0.5F).pushReaction(PushReaction.DESTROY)
+    );
+    public static final Block DUSK_PRESSURE_PLATE = register(ModBlockItemIds.DUSK_PRESSURE_PLATE,
+            p -> new PressurePlateBlock(BlockSetType.OAK, p),
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK).forceSolidOn().instrument(NoteBlockInstrument.BASS)
+                    .noCollision().strength(0.5F).ignitedByLava().pushReaction(PushReaction.DESTROY));
+    //endregion
+
     //region Lucent Petro
     public static final Block LUCENT_PETRO = register(
             ModBlockItemIds.LUCENT_PETRO,
-            RotatedPillarBlock::new,
-            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_MAGENTA).instrument(NoteBlockInstrument.BASS).strength(2.0F, 0.3F).sound(SoundType.STEM).ignitedByLava()
-    );
-    //endregion
-    //region Lucent Planks
-    public static final Block LUCENT_PLANKS = register(
-            ModBlockItemIds.LUCENT_PLANKS,
             RotatedPillarBlock::new,
             BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_MAGENTA).instrument(NoteBlockInstrument.BASS).strength(2.0F, 0.3F).sound(SoundType.STEM).ignitedByLava()
     );
@@ -116,17 +159,72 @@ public class ModBlocks {
             BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_MAGENTA).instrument(NoteBlockInstrument.BASS).strength(2.0F, 0.3F).sound(SoundType.STEM).ignitedByLava()
     );
     //endregion
-    //region Lucent Hypnum
-    public static final Block LUCENT_HYPNUM = register(
-            ModBlockItemIds.LUCENT_HYPNUM,
-            Block::new,
-            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_MAGENTA).strength(0.1F).sound(SoundType.MOSS).pushReaction(PushReaction.DESTROY)
+    //region Lucent Planks
+    public static final Block LUCENT_PLANKS = register(
+            ModBlockItemIds.LUCENT_PLANKS,
+            RotatedPillarBlock::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_MAGENTA).instrument(NoteBlockInstrument.BASS).strength(2.0F, 0.3F).sound(SoundType.STEM).ignitedByLava()
     );
+    public static final Block LUCENT_STAIRS = register(
+            ModBlockItemIds.LUCENT_STAIRS,
+            p -> new StairBlock(LUCENT_PLANKS.defaultBlockState(), p),
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_MAGENTA).instrument(NoteBlockInstrument.BASS).strength(2.0F, 0.3F).sound(SoundType.STEM).ignitedByLava()
+    );
+    public static final Block LUCENT_SLAB = register(
+            ModBlockItemIds.LUCENT_SLAB,
+            SlabBlock::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_MAGENTA).instrument(NoteBlockInstrument.BASS).strength(2.0F, 0.3F).sound(SoundType.STEM).ignitedByLava()
+    );
+    public static final Block LUCENT_FENCE = register(
+            ModBlockItemIds.LUCENT_FENCE,
+            FenceBlock::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_MAGENTA).instrument(NoteBlockInstrument.BASS).strength(2.0F, 0.3F).sound(SoundType.STEM).ignitedByLava()
+    );
+    public static final Block LUCENT_FENCE_GATE = register(
+            ModBlockItemIds.LUCENT_FENCE_GATE,
+            p -> new FenceGateBlock(WoodType.DARK_OAK, p),
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_MAGENTA).instrument(NoteBlockInstrument.BASS).strength(2.0F, 0.3F).sound(SoundType.STEM).ignitedByLava()
+    );
+    public static final Block LUCENT_DOOR = register(
+            ModBlockItemIds.LUCENT_DOOR,
+            p -> new DoorBlock(BlockSetType.OAK, p),
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_MAGENTA).instrument(NoteBlockInstrument.BASS).strength(3.0F).noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY)
+    );
+    public static final Block LUCENT_TRAPDOOR = register(
+            ModBlockItemIds.LUCENT_TRAPDOOR,
+            p -> new TrapDoorBlock(BlockSetType.SPRUCE, p),
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_MAGENTA).instrument(NoteBlockInstrument.BASS).strength(3.0F).noOcclusion().isValidSpawn(Blocks::never).ignitedByLava()
+    );
+    public static final Block LUCENT_BUTTON = register(ModBlockItemIds.LUCENT_BUTTON,
+            p -> new ButtonBlock(BlockSetType.OAK, 30, p),
+            BlockBehaviour.Properties.of().noCollision().strength(0.5F).pushReaction(PushReaction.DESTROY)
+    );
+    public static final Block LUCENT_PRESSURE_PLATE = register(ModBlockItemIds.LUCENT_PRESSURE_PLATE,
+            p -> new PressurePlateBlock(BlockSetType.OAK, p),
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_MAGENTA).forceSolidOn().instrument(NoteBlockInstrument.BASS)
+                    .noCollision().strength(0.5F).ignitedByLava().pushReaction(PushReaction.DESTROY));
     //endregion
+
     //region Azulite
     public static final Block AZULITE = register(
             ModBlockItemIds.AZULITE,
             Block::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.LAPIS).sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)
+    );
+    public static final Block AZULITE_STAIRS = register(
+            ModBlockItemIds.AZULITE_STAIRS,
+            p -> new StairBlock(AZULITE.defaultBlockState(), p),
+            BlockBehaviour.Properties.of().mapColor(MapColor.LAPIS).sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)
+    );
+    public static final Block AZULITE_SLAB = register(
+            ModBlockItemIds.AZULITE_SLAB,
+            SlabBlock::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.LAPIS).sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)
+    );
+    public static final Block AZULITE_WALL = register(
+            ModBlockItemIds.AZULITE_WALL,
+            WallBlock::new,
             BlockBehaviour.Properties.of().mapColor(MapColor.LAPIS).sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)
     );
     //endregion
@@ -136,11 +234,41 @@ public class ModBlocks {
             Block::new,
             BlockBehaviour.Properties.of().mapColor(MapColor.LAPIS).sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)
     );
+    public static final Block POLISHED_AZULITE_STAIRS = register(
+            ModBlockItemIds.POLISHED_AZULITE_STAIRS,
+            p -> new StairBlock(POLISHED_AZULITE.defaultBlockState(), p),
+            BlockBehaviour.Properties.of().mapColor(MapColor.LAPIS).sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)
+    );
+    public static final Block POLISHED_AZULITE_SLAB = register(
+            ModBlockItemIds.POLISHED_AZULITE_SLAB,
+            SlabBlock::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.LAPIS).sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)
+    );
+    public static final Block POLISHED_AZULITE_WALL = register(
+            ModBlockItemIds.POLISHED_AZULITE_WALL,
+            WallBlock::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.LAPIS).sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)
+    );
     //endregion
     //region Azulite Bricks
     public static final Block AZULITE_BRICKS = register(
             ModBlockItemIds.AZULITE_BRICKS,
             Block::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.LAPIS).sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)
+    );
+    public static final Block AZULITE_BRICK_STAIRS = register(
+            ModBlockItemIds.AZULITE_BRICK_STAIRS,
+            p -> new StairBlock(AZULITE_BRICKS.defaultBlockState(), p),
+            BlockBehaviour.Properties.of().mapColor(MapColor.LAPIS).sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)
+    );
+    public static final Block AZULITE_BRICK_SLAB = register(
+            ModBlockItemIds.AZULITE_BRICK_SLAB,
+            SlabBlock::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.LAPIS).sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)
+    );
+    public static final Block AZULITE_BRICK_WALL = register(
+            ModBlockItemIds.AZULITE_BRICK_WALL,
+            WallBlock::new,
             BlockBehaviour.Properties.of().mapColor(MapColor.LAPIS).sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)
     );
     //endregion
@@ -150,11 +278,217 @@ public class ModBlocks {
             Block::new,
             BlockBehaviour.Properties.of().mapColor(MapColor.LAPIS).sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)
     );
+    public static final Block AZULITE_TILE_STAIRS = register(
+            ModBlockItemIds.AZULITE_TILE_STAIRS,
+            p -> new StairBlock(AZULITE_TILES.defaultBlockState(), p),
+            BlockBehaviour.Properties.of().mapColor(MapColor.LAPIS).sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)
+    );
+    public static final Block AZULITE_TILE_SLAB = register(
+            ModBlockItemIds.AZULITE_TILE_SLAB,
+            SlabBlock::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.LAPIS).sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)
+    );
+    public static final Block AZULITE_TILE_WALL = register(
+            ModBlockItemIds.AZULITE_TILE_WALL,
+            WallBlock::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.LAPIS).sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)
+    );
     //endregion
+
+    //region Eldershale
+    public static final Block ELDERSHALE = register(
+            ModBlockItemIds.ELDERSHALE,
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(SoundType.DEEPSLATE)
+
+    );
+    //endregion
+    //region Cobbled Eldershale
+    public static final Block COBBLED_ELDERSHALE = register(
+            ModBlockItemIds.COBBLED_ELDERSHALE,
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(SoundType.DEEPSLATE)
+    );
+    public static final Block COBBLED_ELDERSHALE_STAIRS = register(
+            ModBlockItemIds.COBBLED_ELDERSHALE_STAIRS,
+            p -> new StairBlock(COBBLED_ELDERSHALE.defaultBlockState(), p),
+                    BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(SoundType.DEEPSLATE)
+    );
+    public static final Block COBBLED_ELDERSHALE_SLAB = register(
+            ModBlockItemIds.COBBLED_ELDERSHALE_SLAB,
+            SlabBlock::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(SoundType.DEEPSLATE)
+    );
+    public static final Block COBBLED_ELDERSHALE_WALL = register(
+            ModBlockItemIds.COBBLED_ELDERSHALE_WALL,
+            WallBlock::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(SoundType.DEEPSLATE)
+    );
+    //endregion
+    //region Eldershale Bricks
+    public static final Block ELDERSHALE_BRICKS = register(
+            ModBlockItemIds.ELDERSHALE_BRICKS,
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(SoundType.DEEPSLATE)
+    );
+    public static final Block ELDERSHALE_BRICK_STAIRS = register(
+            ModBlockItemIds.ELDERSHALE_BRICK_STAIRS,
+            p -> new StairBlock(ELDERSHALE_BRICKS.defaultBlockState(), p),
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(SoundType.DEEPSLATE)
+    );
+    public static final Block ELDERSHALE_BRICK_SLAB = register(
+            ModBlockItemIds.ELDERSHALE_BRICK_SLAB,
+            SlabBlock::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(SoundType.DEEPSLATE)
+    );
+    public static final Block ELDERSHALE_BRICK_WALL = register(
+            ModBlockItemIds.ELDERSHALE_BRICK_WALL,
+            WallBlock::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(SoundType.DEEPSLATE)
+    );
+    //endregion
+    //region Cracked Eldershale Bricks
+    public static final Block CRACKED_ELDERSHALE_BRICKS = register(
+            ModBlockItemIds.CRACKED_ELDERSHALE_BRICKS,
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(SoundType.DEEPSLATE)
+    );
+    //endregion
+    //region Polished Eldershale
+    public static final Block POLISHED_ELDERSHALE = register(
+            ModBlockItemIds.POLISHED_ELDERSHALE,
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(SoundType.DEEPSLATE)
+    );
+    public static final Block POLISHED_ELDERSHALE_STAIRS = register(
+            ModBlockItemIds.POLISHED_ELDERSHALE_STAIRS,
+            p -> new StairBlock(POLISHED_ELDERSHALE.defaultBlockState(), p),
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(SoundType.DEEPSLATE)
+    );
+    public static final Block POLISHED_ELDERSHALE_SLAB = register(
+            ModBlockItemIds.POLISHED_ELDERSHALE_SLAB,
+            SlabBlock::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(SoundType.DEEPSLATE)
+    );
+    public static final Block POLISHED_ELDERSHALE_WALL = register(
+            ModBlockItemIds.POLISHED_ELDERSHALE_WALL,
+            WallBlock::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(SoundType.DEEPSLATE)
+    );
+    //endregion
+    //region Chiseled Eldershale
+    public static final Block CHISELED_ELDERSHALE = register(
+            ModBlockItemIds.CHISELED_ELDERSHALE,
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(SoundType.DEEPSLATE)
+    );
+    //endregion
+    //region Eldershale Pillar
+    public static final Block ELDERSHALE_PILLAR = register(
+            ModBlockItemIds.ELDERSHALE_PILLAR,
+            RotatedPillarBlock::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(SoundType.DEEPSLATE)
+    );
+    //endregion
+
     //region Polished End Stone
     public static final Block POLISHED_END_STONE = register(
             ModBlockItemIds.POLISHED_END_STONE,
             Block::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.SAND).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(3.0F, 9.0F)
+    );
+    public static final Block POLISHED_END_STONE_STAIRS = register(
+            ModBlockItemIds.POLISHED_END_STONE_STAIRS,
+            p -> new StairBlock(POLISHED_END_STONE.defaultBlockState(), p),
+            BlockBehaviour.Properties.of().mapColor(MapColor.SAND).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(3.0F, 9.0F)
+    );
+    public static final Block POLISHED_END_STONE_SLAB = register(
+            ModBlockItemIds.POLISHED_END_STONE_SLAB,
+            SlabBlock::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.SAND).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(3.0F, 9.0F)
+    );
+    public static final Block POLISHED_END_STONE_WALL = register(
+            ModBlockItemIds.POLISHED_END_STONE_WALL,
+            WallBlock::new,
             BlockBehaviour.Properties.of().mapColor(MapColor.SAND).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(3.0F, 9.0F)
     );
     //endregion
@@ -162,6 +496,21 @@ public class ModBlocks {
     public static final Block END_STONE_TILES = register(
             ModBlockItemIds.END_STONE_TILES,
             Block::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.SAND).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(3.0F, 9.0F)
+    );
+    public static final Block END_STONE_TILE_STAIRS = register(
+            ModBlockItemIds.END_STONE_TILE_STAIRS,
+            p -> new StairBlock(END_STONE_TILES.defaultBlockState(), p),
+            BlockBehaviour.Properties.of().mapColor(MapColor.SAND).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(3.0F, 9.0F)
+    );
+    public static final Block END_STONE_TILE_SLAB = register(
+            ModBlockItemIds.END_STONE_TILE_SLAB,
+            SlabBlock::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.SAND).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(3.0F, 9.0F)
+    );
+    public static final Block END_STONE_TILE_WALL = register(
+            ModBlockItemIds.END_STONE_TILE_WALL,
+            WallBlock::new,
             BlockBehaviour.Properties.of().mapColor(MapColor.SAND).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(3.0F, 9.0F)
     );
     //endregion
@@ -230,22 +579,73 @@ public class ModBlocks {
             creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.STRIPPED_DUSK_PETRO.asItem());
             creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.STRIPPED_DUSK_CRUST.asItem());
             creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.DUSK_PLANKS.asItem());
+            creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.DUSK_STAIRS.asItem());
+            creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.DUSK_SLAB.asItem());
+            creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.DUSK_FENCE.asItem());
+            creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.DUSK_FENCE_GATE.asItem());
+            creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.DUSK_DOOR.asItem());
+            creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.DUSK_TRAPDOOR.asItem());
+            creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.DUSK_PRESSURE_PLATE.asItem());
+            creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.DUSK_BUTTON.asItem());
             creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.LUCENT_PETRO.asItem());
             creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.LUCENT_CRUST.asItem());
             creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.STRIPPED_LUCENT_PETRO.asItem());
             creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.STRIPPED_LUCENT_CRUST.asItem());
             creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.LUCENT_PLANKS.asItem());
+            creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.LUCENT_STAIRS.asItem());
+            creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.LUCENT_SLAB.asItem());
+            creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.LUCENT_FENCE.asItem());
+            creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.LUCENT_FENCE_GATE.asItem());
+            creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.LUCENT_DOOR.asItem());
+            creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.LUCENT_TRAPDOOR.asItem());
+            creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.LUCENT_PRESSURE_PLATE.asItem());
+            creativeTab.insertBefore(Blocks.STONE.asItem(), ModBlocks.LUCENT_BUTTON.asItem());
 
             creativeTab.insertBefore(Blocks.END_STONE_BRICKS.asItem(), ModBlocks.CHISELED_END_STONE.asItem());
             creativeTab.insertBefore(Blocks.END_STONE_BRICKS.asItem(), ModBlocks.POLISHED_END_STONE.asItem());
+            creativeTab.insertBefore(Blocks.END_STONE_BRICKS.asItem(), ModBlocks.POLISHED_END_STONE_STAIRS.asItem());
+            creativeTab.insertBefore(Blocks.END_STONE_BRICKS.asItem(), ModBlocks.POLISHED_END_STONE_SLAB.asItem());
+            creativeTab.insertBefore(Blocks.END_STONE_BRICKS.asItem(), ModBlocks.POLISHED_END_STONE_WALL.asItem());
             creativeTab.insertBefore(Blocks.PURPUR_BLOCK.asItem(), ModBlocks.END_STONE_TILES.asItem());
+            creativeTab.insertBefore(Blocks.PURPUR_BLOCK.asItem(), ModBlocks.END_STONE_TILE_STAIRS.asItem());
+            creativeTab.insertBefore(Blocks.PURPUR_BLOCK.asItem(), ModBlocks.END_STONE_TILE_SLAB.asItem());
+            creativeTab.insertBefore(Blocks.PURPUR_BLOCK.asItem(), ModBlocks.END_STONE_TILE_WALL.asItem());
 
             creativeTab.insertBefore(Blocks.PURPUR_PILLAR.asItem(), ModBlocks.CHISELED_PURPUR.asItem());
 
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.ELDERSHALE.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.COBBLED_ELDERSHALE.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.COBBLED_ELDERSHALE_STAIRS.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.COBBLED_ELDERSHALE_SLAB.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.COBBLED_ELDERSHALE_WALL.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.CHISELED_ELDERSHALE.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.POLISHED_ELDERSHALE.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.POLISHED_ELDERSHALE_STAIRS.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.POLISHED_ELDERSHALE_SLAB.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.POLISHED_ELDERSHALE_WALL.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.ELDERSHALE_BRICKS.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.ELDERSHALE_BRICK_STAIRS.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.ELDERSHALE_BRICK_SLAB.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.ELDERSHALE_BRICK_WALL.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.CRACKED_ELDERSHALE_BRICKS.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.ELDERSHALE_PILLAR.asItem());
+
             creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.AZULITE.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.AZULITE_STAIRS.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.AZULITE_SLAB.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.AZULITE_WALL.asItem());
             creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.POLISHED_AZULITE.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.POLISHED_AZULITE_STAIRS.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.POLISHED_AZULITE_SLAB.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.POLISHED_AZULITE_WALL.asItem());
             creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.AZULITE_BRICKS.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.AZULITE_BRICK_STAIRS.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.AZULITE_BRICK_SLAB.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.AZULITE_BRICK_WALL.asItem());
             creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.AZULITE_TILES.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.AZULITE_TILE_STAIRS.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.AZULITE_TILE_SLAB.asItem());
+            creativeTab.insertBefore(Blocks.COAL_BLOCK.asItem(), ModBlocks.AZULITE_TILE_WALL.asItem());
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.NATURAL_BLOCKS).register((creativeTab) -> {
             creativeTab.insertBefore(Blocks.COAL_ORE.asItem(), ModBlocks.CHORUS_TURF.asItem());
@@ -253,6 +653,8 @@ public class ModBlocks {
             creativeTab.insertBefore(Blocks.COAL_ORE.asItem(), ModBlocks.ENDSOIL.asItem());
             creativeTab.insertBefore(Blocks.COAL_ORE.asItem(), ModBlocks.LUCENT_ENDSOIL.asItem());
             creativeTab.insertBefore(Blocks.COAL_ORE.asItem(), ModBlocks.LUCENT_HYPNUM.asItem());
+            creativeTab.insertBefore(Blocks.COAL_ORE.asItem(), ModBlocks.ELDERSHALE.asItem());
+            creativeTab.insertBefore(Blocks.COAL_ORE.asItem(), ModBlocks.COBBLED_ELDERSHALE.asItem());
             creativeTab.insertBefore(Blocks.COAL_ORE.asItem(), ModBlocks.AZULITE.asItem());
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register((creativeTab) -> {

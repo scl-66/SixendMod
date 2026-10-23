@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cobbled_eldershale": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sixend:cobbled_eldershale"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sixend:cobbled_eldershale_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cobbled_eldershale"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sixend:cobbled_eldershale_stairs"
+    ]
+  }
+}

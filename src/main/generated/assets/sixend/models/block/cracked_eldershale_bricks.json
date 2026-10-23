@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "sixend:block/cracked_eldershale_bricks"
+  }
+}

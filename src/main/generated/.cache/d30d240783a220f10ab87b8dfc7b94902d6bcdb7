@@ -1,2 +1,19 @@
 // 26.2	-999999999-01-01T00:00:00	Sixend/Tags for minecraft:block
-ffcfd9083e4e0ab97036aa48e49f2fded83410df data/minecraft/tags/block/mineable/pickaxe.json
+506a74fb400a5c74899af2f8f2eabe485a506524 data/minecraft/tags/block/buttons.json
+5f632d9832aac64b0ed63dacf16a435610f87511 data/minecraft/tags/block/doors.json
+cd765aaa004f5872c51c6881c3857f41db33b59d data/minecraft/tags/block/fence_gates.json
+8b282c0ee791bb9d5f0e7ac1450774f8061a9e0e data/minecraft/tags/block/fences.json
+ac3a8d8260b335b02bcd060ad741f2f4b9fd79c1 data/minecraft/tags/block/mineable/axe.json
+b6e5b97475dd55b5468a3d0520b76ea35440ff29 data/minecraft/tags/block/mineable/pickaxe.json
+3a2aa5633741a1b92d6afd5e41547d66f517ee45 data/minecraft/tags/block/pressure_plates.json
+e961fb20e932fe9449f345baab2861a91e879337 data/minecraft/tags/block/slabs.json
+4634de54ce0936c345bce67d66e529e51679765e data/minecraft/tags/block/stairs.json
+d586e01ae7802fe55e2f0c16a306f90f27e1b180 data/minecraft/tags/block/trapdoors.json
+1ab071a0e4dda0150072ef84d85b9d198eb1d1f2 data/minecraft/tags/block/walls.json
+506a74fb400a5c74899af2f8f2eabe485a506524 data/minecraft/tags/block/wooden_buttons.json
+5f632d9832aac64b0ed63dacf16a435610f87511 data/minecraft/tags/block/wooden_doors.json
+8b282c0ee791bb9d5f0e7ac1450774f8061a9e0e data/minecraft/tags/block/wooden_fences.json
+3a2aa5633741a1b92d6afd5e41547d66f517ee45 data/minecraft/tags/block/wooden_pressure_plates.json
+996b152603eb48343d6dc28499ba9c43aeb5ada8 data/minecraft/tags/block/wooden_slabs.json
+ac20ba18e54c46b0fa7ed4bf7a9fb4236c2b9c0c data/minecraft/tags/block/wooden_stairs.json
+d586e01ae7802fe55e2f0c16a306f90f27e1b180 data/minecraft/tags/block/wooden_trapdoors.json

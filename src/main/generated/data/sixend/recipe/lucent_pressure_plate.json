@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": "sixend:lucent_planks"
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "id": "sixend:lucent_pressure_plate"
+  }
+}

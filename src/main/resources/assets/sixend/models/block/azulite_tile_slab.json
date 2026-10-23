@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "sixend:block/azulite_tiles",
+    "side": "sixend:block/azulite_tiles",
+    "top": "sixend:block/azulite_tiles"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_eldershale": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sixend:polished_eldershale"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sixend:polished_eldershale_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_eldershale"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sixend:polished_eldershale_wall"
+    ]
+  }
+}

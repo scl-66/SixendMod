@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "sixend:block/eldershale_bricks",
+    "side": "sixend:block/eldershale_bricks",
+    "top": "sixend:block/eldershale_bricks"
+  }
+}
